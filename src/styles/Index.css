@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li, ul {
+  list-style: none;
+  padding: 0;
+}
+
+.index {
+  display: -ms-grid;
+  display: grid;
+}
+
+.index__top {
+  height: calc(100vh - 4em);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+}
+
+.index__left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
+}
+
+.index__right {
+  margin-bottom: 2em;
+  background-color: #424142;
+  color: white;
+  padding: 0 1em;
+  font-family: 'Inter';
+  font-size: 14px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.index__right__sidebar {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.index__right__sidebar h4 {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 1.2em;
+}
+
+.index__right__sidebar__stocks, .index__right__sidebar__crypto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15% 85%;
+      grid-template-rows: 15% 85%;
+}
+
+.index__right__sidebar__stocks ul, .index__right__sidebar__crypto ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index__right__sidebar__stocks ul li, .index__right__sidebar__crypto ul li {
+  border-bottom: 1px solid #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index__right__sidebar__stocks ul li p, .index__right__sidebar__crypto ul li p {
+  margin: 0;
+  font-weight: 900;
+}
+
+.price__percentage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price__percentage p {
+  font-size: .92em;
+  font-weight: 700;
+}
+
+.price__percentage small {
+  color: #00D54B;
+}
+/*# sourceMappingURL=Index.css.map */

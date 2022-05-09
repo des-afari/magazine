@@ -1,0 +1,37 @@
+@import './config';
+
+header{
+    @include flex(space-between, center);    
+}
+
+.header__search__box{
+    @include flex(center, center);
+    border: 1px solid black;
+    
+    input{
+        border: none;
+        font-size: 1rem;
+        width: 100%;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.header__navigation{
+    display: flex;
+    column-gap: 1em;
+
+    a{
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        font-weight: 900;
+        transition: transform 250ms ease;
+        
+       &:hover{
+           transform: scale(1.1);
+       }
+    }
+}

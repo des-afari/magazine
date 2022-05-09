@@ -1,0 +1,83 @@
+@import './config';
+
+.index{
+    display: grid;
+}
+
+.index__top{
+    height: calc(100vh - 4em);
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.index__left{
+    display: grid;
+    grid-template-rows: 60% 40%;
+
+    &__top{
+    }
+    
+    &__bottom{
+    }
+}
+
+.index__right{
+    margin-bottom: 2em;
+    background-color: #424142;
+    color: white;
+    padding: 0 1em;
+    font-family: 'Inter';
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    
+    &__sidebar{
+        height: 100%;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        
+        h4{
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            margin: 0;
+            margin-top: 1.2em;
+        }
+
+        &__stocks, &__crypto{
+            display: grid;
+            grid-template-rows: 15% 85%;
+
+            ul{
+                display: grid;
+                grid-template-rows: repeat(5, 1fr);
+                align-items: center;
+
+                li{
+                    border-bottom: 1px solid $line;
+                    @include flex(space-between, center);
+                    
+                    p{
+                        margin: 0;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.price__percentage{
+    @include flex(center, center);
+    flex-direction: column;
+    
+    p{
+        font-size: .92em;
+        font-weight: 700;
+    }
+
+    small{
+        color: $green;
+    }
+
+}
